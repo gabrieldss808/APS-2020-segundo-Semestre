@@ -1,6 +1,19 @@
 package com.aps.cc.unip.model;
 
-public class Author {
+import net.bytebuddy.implementation.bind.MethodDelegationBinder;
+
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Entity
+
+public class Author implements Serializable {
+
+
+    @Id
+    @Column(unique = true)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer author_id;
     private String name;
     private String fname;
 

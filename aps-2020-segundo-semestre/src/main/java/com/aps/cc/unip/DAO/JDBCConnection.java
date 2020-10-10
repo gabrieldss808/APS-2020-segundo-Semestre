@@ -46,6 +46,8 @@ public class JDBCConnection {
                 for (int i = 1; i <= columnsNumber; i++) {
                     System.out.printf("%-25s", (resultSet.getObject(i) != null) ? resultSet.getObject(i).toString() : "vaziooo");
                 }
+
+                System.out.println("\n");
             }
         } catch (SQLException ex) {
             System.out.println("Exception while executing statement. Terminating program... " + ex.getMessage());
