@@ -1,0 +1,7 @@
+
+	java:S116"gRename this field "gerenciarPublicaÃ§ÃµesButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“çøæùÿÿÿÿ
+\
+java:S1068"ARemove this unused "visualizarPublicaÃ§ÃµesButton" private field.(ê›É¼úÿÿÿÿ
+‚	java:S116"hRename this field "visualizarPublicaÃ§ÃµesButton" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ê›É¼úÿÿÿÿ
+[
+java:S1068"@Remove this unused "gerenciarPublicaÃ§ÃµesButton" private field.(“çøæùÿÿÿÿ
