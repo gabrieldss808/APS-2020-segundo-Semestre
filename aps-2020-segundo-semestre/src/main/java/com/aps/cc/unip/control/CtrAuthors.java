@@ -2,10 +2,11 @@ package com.aps.cc.unip.control;
 
 import java.util.List;
 
-import com.aps.cc.unip.model.Author;
+import com.aps.cc.unip.model.Authors;
+import com.aps.cc.unip.model.Authors;
 import org.hibernate.HibernateException;
 import com.aps.cc.unip.DAO.DaoAuthors;
-import com.aps.cc.unip.model.Author;
+import com.aps.cc.unip.model.Authors;
 
 
 public class CtrAuthors {
@@ -14,7 +15,7 @@ public class CtrAuthors {
     public CtrAuthors() {
         acessohibernateauthors = new DaoAuthors();
     }
-    public int gravarAuthors(Author author) {
+    public int gravarAuthors(Authors author) {
         try {
             acessohibernateauthors.gravar(author);
             return 1;
@@ -25,13 +26,13 @@ public class CtrAuthors {
     }
     public List carregarAuthors() {
         try {
-            return acessohibernateauthors.carregarTudoOrdenado(Author.class,
+            return acessohibernateauthors.carregarTudoOrdenado(Authors.class,
                     "nome");
         } catch (HibernateException e) {
             return null;
         }
     }
-    public boolean excluirAuthors(Author author) {
+    public boolean excluirAuthors(Authors author) {
         try {
             acessohibernateauthors.excluir(author);
             return true;
@@ -40,7 +41,7 @@ public class CtrAuthors {
             return false;
         }
     }
-    public boolean alterarAuthors(Author author) {
+    public boolean alterarAuthors(Authors author) {
         try {
             acessohibernateauthors.alterar(author);
             return true;
