@@ -1,0 +1,29 @@
+
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ÓÒÔğıÿÿÿÿ8îŞé÷È.
+T	java:S1068"9Replace this use of System.out or System.err by a logger.(±À8ó×ˆøÈ.
+J
+java:S1068"-Remove this unused "className" private field.(•·’²8º¡Ê÷È.
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÂ†µ8º¡Ê÷È.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ãòËß
+i
+java:S2095%"GUse try-with-resources or close this "Statement" in a "finally" clause.(õ½ÛØşÿÿÿÿ8ó×ˆøÈ.
+W
+java:S1141P"5Extract this nested try block into a separate method.(ê ûÙøÿÿÿÿ8á¶¬øÈ.
+>
+java:S1659"!Declare "URL" on a separate line.(•·’²8º¡Ê÷È.
+?
+java:S1659""Declare "user" on a separate line.(•·’²8º¡Ê÷È.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Îöï¥ÿÿÿÿÿ8°ïÖøÈ.
+m	java:S117A"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğøû8á¶¬øÈ.
+j	java:S116"NRename this field "URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•·’²8º¡Ê÷È.
+O
+java:S4925"-Remove this "Class.forName()", it is useless.(õ†¨Äùÿÿÿÿ8„¶å÷È.
+U	java:S1060"9Replace this use of System.out or System.err by a logger.(¼©„ë8ó×ˆøÈ.
+T	java:S106:"9Replace this use of System.out or System.err by a logger.(†ŒÊ98Íì¸±Ô.
+Z	java:S106."9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8ØâñøÈ.
+C
+java:S1659"&Declare "password" on a separate line.(•·’²8º¡Ê÷È.
+Z	java:S1064"9Replace this use of System.out or System.err by a logger.(ƒÇãˆúÿÿÿÿ8Ø÷üøÈ.
+Z	java:S106U"9Replace this use of System.out or System.err by a logger.(ı™øøÿÿÿÿ8á¶¬øÈ.
+Z	java:S106Y"9Replace this use of System.out or System.err by a logger.(ı™øøÿÿÿÿ8á¶¬øÈ.
+Z	java:S1066"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8ó×ˆøÈ.

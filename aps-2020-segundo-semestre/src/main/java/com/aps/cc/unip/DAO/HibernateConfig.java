@@ -1,6 +1,6 @@
 package com.aps.cc.unip.DAO;
 
-import com.aps.cc.unip.model.Author;
+import com.aps.cc.unip.model.Authors;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -11,6 +11,7 @@ public class HibernateConfig {
     private static SessionFactory sessionFactory;
     public HibernateConfig() {
     }
+
     public Session openSession() {
         if (sessionFactory == null) {
             criaSessionFactory();
@@ -19,7 +20,7 @@ public class HibernateConfig {
     }
     public void criaSessionFactory() {
         Configuration configuration = new Configuration();
-        configuration.addAnnotatedClass(Author.class);
+        configuration.addAnnotatedClass(Authors.class);
         ServiceRegistry serviceRegistry = new
                 StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).
                 build();

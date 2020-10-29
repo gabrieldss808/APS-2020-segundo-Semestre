@@ -1,0 +1,21 @@
+
+Z
+java:S1854"8Remove this useless assignment to local variable "user".(÷ıïÃşÿÿÿÿ8Ïì¸±Ô.
+T
+java:S1854
+"7Remove this useless assignment to local variable "URL".(„¡ã 8Ïì¸±Ô.
+m	java:S117
+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„¡ã 8ç³ĞøÈ.
+O
+java:S1481"-Remove this unused "password" local variable.(–ŸèÀúÿÿÿÿ8Ïì¸±Ô.
+K
+java:S1481")Remove this unused "user" local variable.(÷ıïÃşÿÿÿÿ8Ïì¸±Ô.
+\
+java:S1128"?Remove this unused import 'com.aps.cc.unip.DAO.JDBCConnection'.(È÷”ï8Ïì¸±Ô.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯öù®ûÿÿÿÿ8Ïì¸±Ô.
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ßöëİıÿÿÿÿ8á–÷È.
+^
+java:S1854"<Remove this useless assignment to local variable "password".(–ŸèÀúÿÿÿÿ8Ïì¸±Ô.
+E
+java:S1481
+"(Remove this unused "URL" local variable.(„¡ã 8Ïì¸±Ô.

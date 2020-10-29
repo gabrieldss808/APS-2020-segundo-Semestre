@@ -15,6 +15,7 @@ public class BDAuthorsFunctions {
     public BDAuthorsFunctions () {
         hibernateConnection = new HibernateConfig();
     }
+
     public void gravar(Object obj) throws HibernateException {
         Session session = hibernateConnection.openSession();
         Transaction transaction = session.beginTransaction();
@@ -22,6 +23,7 @@ public class BDAuthorsFunctions {
         transaction.commit();
         session.close();
     }
+
     public void alterar(Object obj) throws HibernateException {
         Session session = hibernateConnection.openSession();
         Transaction transaction = session.beginTransaction();
@@ -29,6 +31,7 @@ public class BDAuthorsFunctions {
         transaction.commit();
         session.close();
     }
+
     public void excluir(Object obj) throws HibernateException {
         Session session = hibernateConnection.openSession();
         Transaction transaction = session.beginTransaction();
@@ -36,6 +39,7 @@ public class BDAuthorsFunctions {
         transaction.commit();
         session.close();
     }
+
     public List carregarTudoOrdenado(Class clas, String ordem) throws
             HibernateException {
         Session session = hibernateConnection.openSession();
@@ -45,6 +49,7 @@ public class BDAuthorsFunctions {
         session.close();
         return lista;
     }
+
     public Object carregarUm(int id, Class<?> clas) throws HibernateException {
         Session session = hibernateConnection.openSession();
         Transaction transaction = session.beginTransaction();
