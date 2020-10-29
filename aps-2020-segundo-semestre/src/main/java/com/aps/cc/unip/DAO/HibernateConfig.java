@@ -7,9 +7,9 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
-public class HibernateConnection {
+public class HibernateConfig {
     private static SessionFactory sessionFactory;
-    public HibernateConnection() {
+    public HibernateConfig() {
     }
     public Session openSession() {
         if (sessionFactory == null) {

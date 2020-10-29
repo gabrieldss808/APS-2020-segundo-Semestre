@@ -1,15 +1,15 @@
 package com.aps.cc.unip.model;
 
-import net.bytebuddy.implementation.bind.MethodDelegationBinder;
-
-import javax.persistence.*;
 import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 
 public class Author implements Serializable {
-
-
     @Id
     @Column(unique = true)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,9 +17,15 @@ public class Author implements Serializable {
     private String name;
     private String fname;
 
-    public Author(String name, String fname){
-        this.setName(name);
-        this.setFname(fname);
+    public void Author(){
+    }
+
+    public Integer getAuthor_id() {
+        return author_id;
+    }
+
+    public void setAuthor_id(Integer author_id) {
+        this.author_id = author_id;
     }
 
     public String getName() {

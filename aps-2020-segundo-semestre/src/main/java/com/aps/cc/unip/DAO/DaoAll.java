@@ -1,5 +1,7 @@
-/*package com.aps.cc.unip.DAO;
+package com.aps.cc.unip.DAO;
 
+import com.aps.cc.unip.DAO.HibernateConfig;
+import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -7,30 +9,27 @@ import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
-import java.util.List;
-
-public class BDAuthorsFunctions {
-
-    protected HibernateConfig hibernateConnection;
-    public BDAuthorsFunctions () {
-        hibernateConnection = new HibernateConfig();
+public class DaoAll {
+    protected HibernateConfig hibernateConfiguracao;
+    public DaoAll () {
+        hibernateConfiguracao = new HibernateConfig();
     }
     public void gravar(Object obj) throws HibernateException {
-        Session session = hibernateConnection.openSession();
+        Session session = hibernateConfiguracao.openSession();
         Transaction transaction = session.beginTransaction();
         session.save(obj);
         transaction.commit();
         session.close();
     }
     public void alterar(Object obj) throws HibernateException {
-        Session session = hibernateConnection.openSession();
+        Session session = hibernateConfiguracao.openSession();
         Transaction transaction = session.beginTransaction();
         session.update(obj);
         transaction.commit();
         session.close();
     }
     public void excluir(Object obj) throws HibernateException {
-        Session session = hibernateConnection.openSession();
+        Session session = hibernateConfiguracao.openSession();
         Transaction transaction = session.beginTransaction();
         session.delete(obj);
         transaction.commit();
@@ -38,7 +37,7 @@ public class BDAuthorsFunctions {
     }
     public List carregarTudoOrdenado(Class clas, String ordem) throws
             HibernateException {
-        Session session = hibernateConnection.openSession();
+        Session session = hibernateConfiguracao.openSession();
         Criteria criteria = session.createCriteria(clas);
         criteria.addOrder(Order.asc(ordem));
         List lista = criteria.list();
@@ -46,7 +45,7 @@ public class BDAuthorsFunctions {
         return lista;
     }
     public Object carregarUm(int id, Class<?> clas) throws HibernateException {
-        Session session = hibernateConnection.openSession();
+        Session session = hibernateConfiguracao.openSession();
         Transaction transaction = session.beginTransaction();
         Criteria criteria = session.createCriteria(clas);
         criteria.add(Restrictions.eq("id", id));
@@ -56,4 +55,3 @@ public class BDAuthorsFunctions {
         return obj;
     }
 }
-*/
