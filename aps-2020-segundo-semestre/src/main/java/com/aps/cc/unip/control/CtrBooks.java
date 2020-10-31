@@ -2,46 +2,46 @@ package com.aps.cc.unip.control;
 
 import java.util.List;
 
-import com.aps.cc.unip.model.Authors;
+import com.aps.cc.unip.model.Books;
 import org.hibernate.HibernateException;
-import com.aps.cc.unip.DAO.DaoAuthors;
+import com.aps.cc.unip.DAO.DaoBooks;
 
 
-public class CtrAuthors {
-    DaoAuthors acessohibernateauthors;
+public class CtrBooks {
+    DaoBooks acessohibernateauthors;
 
-    public CtrAuthors() {
-        acessohibernateauthors = new DaoAuthors();
+    public CtrBooks() {
+        acessohibernateauthors = new DaoBooks();
     }
-    public int gravarAuthors(Authors author) {
+    public int gravarPublishers(Books publishers) {
         try {
-            acessohibernateauthors.gravar(author);
+            acessohibernateauthors.gravar(publishers);
             return 1;
         } catch (HibernateException e) {
             e.printStackTrace();
             return 2;
         }
     }
-    public List carregarAuthors() {
+    public List carregarPublishers() {
         try {
-            return acessohibernateauthors.carregarTudoOrdenado(Authors.class,
+            return acessohibernateauthors.carregarTudoOrdenado(Books.class,
                     "nome");
         } catch (HibernateException e) {
             return null;
         }
     }
-    public boolean excluirAuthors(Authors author) {
+    public boolean excluirPublishers(Books books) {
         try {
-            acessohibernateauthors.excluir(author);
+            acessohibernateauthors.excluir(books);
             return true;
         } catch (HibernateException e) {
             e.printStackTrace();
             return false;
         }
     }
-    public boolean alterarAuthors(Authors author) {
+    public boolean alterarPublishers(Books books) {
         try {
-            acessohibernateauthors.alterar(author);
+            acessohibernateauthors.alterar(books);
             return true;
         } catch (HibernateException e) {
             e.printStackTrace();
