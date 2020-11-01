@@ -1,7 +1,5 @@
 package com.aps.cc.unip.DAO;
 
-import com.aps.cc.unip.DAO.HibernateConfig;
-import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -9,11 +7,21 @@ import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
+import java.util.List;
+
 public class DaoAll {
     protected HibernateConfig hibernateConfiguracao;
-    public DaoAll () {
+    protected Class clasz;
+
+    public DaoAll() {
         hibernateConfiguracao = new HibernateConfig();
     }
+
+    public DaoAll(Class clasz) {
+        super();
+        this.clasz = clasz;
+    }
+
     public void gravar(Object obj) throws HibernateException {
         Session session = hibernateConfiguracao.openSession();
         Transaction transaction = session.beginTransaction();
@@ -21,6 +29,7 @@ public class DaoAll {
         transaction.commit();
         session.close();
     }
+
     public void alterar(Object obj) throws HibernateException {
         Session session = hibernateConfiguracao.openSession();
         Transaction transaction = session.beginTransaction();
@@ -28,6 +37,7 @@ public class DaoAll {
         transaction.commit();
         session.close();
     }
+
     public void excluir(Object obj) throws HibernateException {
         Session session = hibernateConfiguracao.openSession();
         Transaction transaction = session.beginTransaction();
@@ -35,19 +45,21 @@ public class DaoAll {
         transaction.commit();
         session.close();
     }
-    public List carregarTudoOrdenado(Class clas, String ordem) throws
+
+    public List carregarTudoOrdenado(String ordem) throws
             HibernateException {
         Session session = hibernateConfiguracao.openSession();
-        Criteria criteria = session.createCriteria(clas);
+        Criteria criteria = session.createCriteria(clasz);
         criteria.addOrder(Order.asc(ordem));
         List lista = criteria.list();
         session.close();
         return lista;
     }
-    public Object carregarUm(int id, Class<?> clas) throws HibernateException {
+
+    public Object carregarUm(int id) throws HibernateException {
         Session session = hibernateConfiguracao.openSession();
         Transaction transaction = session.beginTransaction();
-        Criteria criteria = session.createCriteria(clas);
+        Criteria criteria = session.createCriteria(clasz);
         criteria.add(Restrictions.eq("id", id));
         Object obj = criteria.uniqueResult();
         transaction.commit();
