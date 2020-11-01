@@ -1,6 +1,8 @@
 package com.aps.cc.unip.controller;
 
 import com.aps.cc.unip.DAO.DaoBooks;
+import com.aps.cc.unip.exception.ReadValuesFailException;
+import com.aps.cc.unip.exception.SaveOrUpdateFailException;
 import com.aps.cc.unip.model.Books;
 import org.hibernate.HibernateException;
 
@@ -14,56 +16,51 @@ public class BooksControllerImpl implements BooksControllerInterface {
     }
 
     @Override
-    public List<Books> getBooks() {
+    public List<Books> getBooks() throws HibernateException{
         try {
             return daoBooks.carregarTudoOrdenado("title", Books.class);
         }catch (HibernateException e){
-            e.printStackTrace();
-            return null;
+            throw new ReadValuesFailException("Falha na leitura dos Livros.");
         }
 
     }
 
     @Override
-    public Books getBookByName(String name) {
+    public Books getBookByName(String name) throws HibernateException{
         try {
             return daoBooks.getByName(name);
         }catch (HibernateException e){
-            e.printStackTrace();
-            return null;
+            throw new ReadValuesFailException("Falha na leitura do Livro: "+ name+".");
         }
     }
 
     @Override
-    public boolean addBook(Books books) {
+    public boolean addBook(Books books) throws HibernateException{
         try{
             daoBooks.gravar(books);
             return true;
         }catch (HibernateException e){
-            e.printStackTrace();
-            return false;
+            throw new SaveOrUpdateFailException("Falha ao adicionar o Livro: \n"+books);
         }
     }
 
     @Override
-    public boolean updateBook(Books books) {
+    public boolean updateBook(Books books) throws HibernateException{
         try{
             daoBooks.alterar(books);
             return true;
         }catch (HibernateException e){
-            e.printStackTrace();
-            return false;
+            throw new SaveOrUpdateFailException("Falha ao alterar o Autor: \n"+books);
         }
     }
 
     @Override
-    public boolean deleteBook(Books books) {
+    public boolean deleteBook(Books books) throws HibernateException{
         try{
             daoBooks.excluir(books);
             return true;
         }catch (HibernateException e){
-            e.printStackTrace();
-            return false;
+            throw new SaveOrUpdateFailException("Falha ao deletar o Autor: \n"+books);
         }
     }
 }

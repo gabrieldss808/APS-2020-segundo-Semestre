@@ -1,16 +1,17 @@
 package com.aps.cc.unip.DAO;
 
-import com.aps.cc.unip.model.Books;
 import com.aps.cc.unip.model.Publishers;
 import org.hibernate.Criteria;
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
-public class DaoPublishers extends DaoAll{
-    public void DaoPublishers(){}
+public class DaoPublishers extends DaoAll {
+    public void DaoPublishers() {
+    }
 
-    public Publishers getByName(String name){
+    public Publishers getByName(String name) throws HibernateException {
         Session session = hibernateConfiguracao.openSession();
         Transaction transaction = session.beginTransaction();
 

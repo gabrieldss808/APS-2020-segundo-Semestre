@@ -9,6 +9,7 @@ import org.hibernate.service.ServiceRegistry;
 
 public class HibernateConfig {
     private static SessionFactory sessionFactory;
+
     public HibernateConfig() {
     }
 
@@ -18,6 +19,7 @@ public class HibernateConfig {
         }
         return sessionFactory.openSession();
     }
+
     public void criaSessionFactory() {
         Configuration configuration = new Configuration();
         configuration.addAnnotatedClass(Authors.class);
