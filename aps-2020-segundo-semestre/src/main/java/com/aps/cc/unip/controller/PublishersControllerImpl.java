@@ -16,7 +16,7 @@ public class PublishersControllerImpl implements PublishersControllerInterface {
     @Override
     public List<Publishers> getPublishers() {
         try {
-            return daoPublishers.carregarTudoOrdenado("name");
+            return daoPublishers.carregarTudoOrdenado("name", Publishers.class);
         }catch (HibernateException e){
             e.printStackTrace();
             return null;

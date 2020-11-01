@@ -16,7 +16,7 @@ public class BooksControllerImpl implements BooksControllerInterface {
     @Override
     public List<Books> getBooks() {
         try {
-            return daoBooks.carregarTudoOrdenado("title");
+            return daoBooks.carregarTudoOrdenado("title", Books.class);
         }catch (HibernateException e){
             e.printStackTrace();
             return null;

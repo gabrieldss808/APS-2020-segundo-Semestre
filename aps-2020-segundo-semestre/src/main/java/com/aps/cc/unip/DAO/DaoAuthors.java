@@ -7,16 +7,13 @@ import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
 public class DaoAuthors extends DaoAll {
-    public void DaoAuthors() {
-        super.clasz = Authors.class;
-        System.out.println("Class: "+super.clasz);
-    }
+    public void DaoAuthors() {}
 
     public Authors getByName(String name) {
         Session session = hibernateConfiguracao.openSession();
         Transaction transaction = session.beginTransaction();
 
-        Criteria criteria = session.createCriteria(super.clasz);
+        Criteria criteria = session.createCriteria(Authors.class);
         criteria.add(Restrictions.eq("name", name));
 
         Object obj = criteria.uniqueResult();

@@ -16,7 +16,7 @@ public class AuthorsControllerImpl implements AuthorsControllerInterface {
     @Override
     public List<Authors> getAuthors() {
         try {
-            return daoAuthors.carregarTudoOrdenado( "name");
+            return daoAuthors.carregarTudoOrdenado( "name", Authors.class);
         } catch (HibernateException e) {
             e.printStackTrace();
             return null;

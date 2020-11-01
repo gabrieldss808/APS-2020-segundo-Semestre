@@ -44,4 +44,14 @@ public class Books implements Serializable {
     public void setPrice(Float price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "Books{" +
+                "title='" + title + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", publisher_id=" + publisher_id +
+                ", price=" + price +
+                '}';
+    }
 }

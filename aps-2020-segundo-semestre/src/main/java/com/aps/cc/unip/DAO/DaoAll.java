@@ -11,15 +11,9 @@ import java.util.List;
 
 public class DaoAll {
     protected HibernateConfig hibernateConfiguracao;
-    protected Class clasz;
 
     public DaoAll() {
         hibernateConfiguracao = new HibernateConfig();
-    }
-
-    public DaoAll(Class clasz) {
-        super();
-        this.clasz = clasz;
     }
 
     public void gravar(Object obj) throws HibernateException {
@@ -46,20 +40,19 @@ public class DaoAll {
         session.close();
     }
 
-    public List carregarTudoOrdenado(String ordem) throws
+    public List carregarTudoOrdenado(String ordem, Class<?> clas) throws
             HibernateException {
         Session session = hibernateConfiguracao.openSession();
-        Criteria criteria = session.createCriteria(clasz);
+        Criteria criteria = session.createCriteria(clas);
         criteria.addOrder(Order.asc(ordem));
         List lista = criteria.list();
         session.close();
         return lista;
     }
-
-    public Object carregarUm(int id) throws HibernateException {
+    public Object carregarUm(int id, Class<?> clas) throws HibernateException {
         Session session = hibernateConfiguracao.openSession();
         Transaction transaction = session.beginTransaction();
-        Criteria criteria = session.createCriteria(clasz);
+        Criteria criteria = session.createCriteria(clas);
         criteria.add(Restrictions.eq("id", id));
         Object obj = criteria.uniqueResult();
         transaction.commit();
