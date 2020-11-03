@@ -49,8 +49,9 @@ public class Main {
             e.printStackTrace();
         }*/
 
-        /*publisher funcionando*/
 
+        /*publisher funcionando*/
+        /*
         PublishersControllerImpl ctrPublishers;
         Publishers publishers;
 
