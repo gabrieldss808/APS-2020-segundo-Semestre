@@ -10,6 +10,8 @@ public class Books implements Serializable {
     @Id
     @Column(unique = true)
     private String isbn;
+    @OneToOne
+    @JoinColumn(name = "Publisher_id")
     private Integer publisher_id;
     private Float price;
 
@@ -44,6 +46,7 @@ public class Books implements Serializable {
     public void setPrice(Float price) {
         this.price = price;
     }
+
 
     @Override
     public String toString() {

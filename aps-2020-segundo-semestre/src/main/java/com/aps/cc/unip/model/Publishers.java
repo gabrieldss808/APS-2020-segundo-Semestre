@@ -6,7 +6,6 @@ import java.io.Serializable;
 @Entity
 public class Publishers implements Serializable {
 
-
     @Id
     @Column(unique = true)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,5 +37,14 @@ public class Publishers implements Serializable {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    @Override
+    public String toString() {
+        return "Publisher{" +
+                "publisher_id=" + publisher_id +
+                ", name='" + name + '\'' +
+                ", url='" + url + '\'' +
+                '}';
     }
 }
