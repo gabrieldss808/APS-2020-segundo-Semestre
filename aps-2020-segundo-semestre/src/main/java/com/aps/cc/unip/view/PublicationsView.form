@@ -59,27 +59,15 @@
             <item value="Id: 2 - Publicaçao Exemplo 2"/>
             <item value="Id: 1 - Publicaçao Exemplo 1"/>
             <item value="Id: 2 - Publicaçao Exemplo 2"/>
-            <item value="Id: 1 - Publicaçao Exemplo 1"/>
-            <item value="Id: 2 - Publicaçao Exemplo 2"/>
           </model>
           <name value=""/>
           <valueIsAdjusting value="false"/>
           <visibleRowCount value="15"/>
         </properties>
       </component>
-      <component id="ef8f3" class="javax.swing.JTextField" binding="InputIdToView">
-        <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <toolTipText value="Digite o ID que deseja Visualizar"/>
-        </properties>
-      </component>
       <component id="e9787" class="javax.swing.JButton" binding="btnVisualizar">
         <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <label value="Visualizar"/>
