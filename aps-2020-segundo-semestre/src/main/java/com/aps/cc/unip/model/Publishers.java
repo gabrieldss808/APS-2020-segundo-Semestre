@@ -6,7 +6,6 @@ import java.io.Serializable;
 @Entity
 public class Publishers implements Serializable {
 
-
     @Id
     @Column(unique = true)
     @GeneratedValue(strategy = GenerationType.IDENTITY)

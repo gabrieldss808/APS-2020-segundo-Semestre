@@ -6,12 +6,14 @@ import java.io.Serializable;
 @Entity
 public class Books implements Serializable {
 
-    private String title;
     @Id
     @Column(unique = true)
     private String isbn;
+    private String title;
     private Integer publisher_id;
     private Float price;
+
+    public Books(){}
 
     public String getTitle() {
         return title;
