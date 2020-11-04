@@ -26,6 +26,7 @@ public class HibernateConfig {
         Configuration configuration = new Configuration();
         configuration.addAnnotatedClass(Authors.class);
         configuration.addAnnotatedClass(Publishers.class);
+        configuration.addAnnotatedClass(Books.class);
         ServiceRegistry serviceRegistry = new
                 StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).
                 build();

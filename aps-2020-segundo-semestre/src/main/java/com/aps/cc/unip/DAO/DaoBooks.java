@@ -8,8 +8,7 @@ import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
 public class DaoBooks extends DaoAll {
-    public DaoBooks() {
-    }
+    public void DaoBooks(){}
 
     public Books getByName(String name) throws HibernateException {
         Session session = hibernateConfiguracao.openSession();
