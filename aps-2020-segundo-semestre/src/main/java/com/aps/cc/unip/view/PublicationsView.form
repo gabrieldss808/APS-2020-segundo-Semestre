@@ -48,18 +48,7 @@
           <foreground color="-4473925"/>
           <inheritsPopupMenu value="true"/>
           <layoutOrientation value="2"/>
-          <model>
-            <item value="Id: 1 - Publicaçao Exemplo 1"/>
-            <item value="Id: 2 - Publicaçao Exemplo 2"/>
-            <item value="Id: 1 - Publicaçao Exemplo 1"/>
-            <item value="Id: 2 - Publicaçao Exemplo 2"/>
-            <item value="Id: 1 - Publicaçao Exemplo 1"/>
-            <item value="Id: 2 - Publicaçao Exemplo 2"/>
-            <item value="Id: 1 - Publicaçao Exemplo 1"/>
-            <item value="Id: 2 - Publicaçao Exemplo 2"/>
-            <item value="Id: 1 - Publicaçao Exemplo 1"/>
-            <item value="Id: 2 - Publicaçao Exemplo 2"/>
-          </model>
+          <model/>
           <name value=""/>
           <valueIsAdjusting value="false"/>
           <visibleRowCount value="15"/>

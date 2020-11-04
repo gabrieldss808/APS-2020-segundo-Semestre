@@ -17,7 +17,7 @@ public class PublicationsView {
     private JButton BtnSearchNow;
     private JList PublicationsList;
     private JButton btnVisualizar;
-    private Array listOfBooks;
+    private DefaultListModel listOfBooks;
 
     public PublicationsView() {
         btnVisualizar.addActionListener(new ActionListener() {
@@ -29,27 +29,33 @@ public class PublicationsView {
     }
 
     public void ShowView() {
+
+        this.LoadingItensList();
+
         JFrame PublicationsView = new JFrame("Livrária Amazonas");
         PublicationsView.setContentPane(new PublicationsView().PublicationsViewMain);
         PublicationsView.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         PublicationsView.setLocationRelativeTo(null);
         PublicationsView.setSize(new Dimension(275,450));
         PublicationsView.pack();
-
-        this.LoadingItensList();
-
         PublicationsView.setVisible(true);
     }
 
     public void LoadingItensList(){
+
+        this.listOfBooks = new DefaultListModel();
+
         try {
             System.out.println("Books Controller");
             BooksControllerInterface booksController = new BooksControllerImpl();
 
             System.out.println("Get all");
             for (Books books : booksController.getBooks()) {
-                System.out.println(books);
+
+                this.listOfBooks.addElement(books.getTitle());
             }
+
+            this.PublicationsList.setModel(this.listOfBooks);
 
         }catch (Exception e){
             e.printStackTrace();
