@@ -10,9 +10,18 @@ public class Books implements Serializable {
     @Id
     @Column(unique = true)
     private String isbn;
-    @OneToOne
-    @JoinColumn(name = "Publisher_id")
-    private Integer publisher_id;
+    @ManyToOne
+    @JoinColumn(name="publisher_id")
+    private Publishers publisher_id;
+
+    public Publishers getPublisher_id() {
+        return publisher_id;
+    }
+
+    public void setPublisher_id(Publishers publisher_id) {
+        this.publisher_id = publisher_id;
+    }
+
     private Float price;
 
     public String getTitle() {
@@ -29,14 +38,6 @@ public class Books implements Serializable {
 
     public void setIsbn(String isbn) {
         this.isbn = isbn;
-    }
-
-    public Integer getPublisher_id() {
-        return publisher_id;
-    }
-
-    public void setPublisher_id(Integer publisher_id) {
-        this.publisher_id = publisher_id;
     }
 
     public Float getPrice() {

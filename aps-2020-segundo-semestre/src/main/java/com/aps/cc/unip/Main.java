@@ -50,18 +50,12 @@ public class Main {
         }*/
 
 
-        /*publisher funcionando*/
-        /*
-        PublishersControllerImpl ctrPublishers;
-        Publishers publishers;
 
-        ctrPublishers = new PublishersControllerImpl();
-        publishers = new Publishers();
 
-        publishers.setName("Publi4");
-        publishers.setUrl("www.publi4.com");
 
-        ctrPublishers.addPublisher(publishers);
+
+
+
 
         /*authors funcionando*/
         /*AuthorsControllerImpl ctrAuthors;
@@ -74,18 +68,48 @@ public class Main {
         authors.setFname("TesteFname7");
         ctrAuthors.addAuthor(authors);*/
 
+
+
+
+
+
+
+
+
+        /*publisher funcionando*/
+
+        /*PublishersControllerImpl ctrPublishers;
+        Publishers publishers;
+
+        ctrPublishers = new PublishersControllerImpl();
+        publishers = new Publishers();
+
+        publishers.setName("Publi11");
+        publishers.setUrl("www.publi11.com");
+
+        ctrPublishers.addPublisher(publishers);*/
+
+
+
+
+
+
+
+
         /*BooksControllerImpl ctrBooks = new BooksControllerImpl();
         Books books = new Books();
+        PublishersControllerImpl ctrPublishers = new PublishersControllerImpl();
 
-        books.setTitle("BOOK2");
-        books.setIsbn("ISBN2TESTE");
-        books.setPublisher_id(1);
-        books.setPrice((float) 50.4);
+
+        books.setTitle("BOOK3");
+        books.setIsbn("ISBN3TESTE");
+        books.setPublisher_id(ctrPublishers.getPublisherByName("Publi11"));
+        books.setPrice((float) 88.4);
 
         ctrBooks.addBook(books);
-        */
 
-        System.out.println("Finish");
+
+        System.out.println("Finish");*/
     }
 
 
