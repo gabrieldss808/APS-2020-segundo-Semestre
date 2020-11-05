@@ -4,9 +4,11 @@ import com.aps.cc.unip.DAO.HibernateConfig;
 import com.aps.cc.unip.controller.*;
 import com.aps.cc.unip.model.Authors;
 import com.aps.cc.unip.model.Books;
+import com.aps.cc.unip.model.BooksAuthors;
 import com.aps.cc.unip.model.Publishers;
 
 import javax.swing.*;
+import java.awt.print.Book;
 
 public class Main {
 
@@ -64,8 +66,8 @@ public class Main {
         ctrAuthors = new AuthorsControllerImpl();
         authors = new Authors();
 
-        authors.setName("TesteName7");
-        authors.setFname("TesteFname7");
+        authors.setName("TesteName3");
+        authors.setFname("TesteFname3");
         ctrAuthors.addAuthor(authors);*/
 
 
@@ -78,14 +80,11 @@ public class Main {
 
         /*publisher funcionando*/
 
-        /*PublishersControllerImpl ctrPublishers;
-        Publishers publishers;
+        /*PublishersControllerImpl ctrPublishers = new PublishersControllerImpl();
+        Publishers publishers = new Publishers();
 
-        ctrPublishers = new PublishersControllerImpl();
-        publishers = new Publishers();
-
-        publishers.setName("Publi11");
-        publishers.setUrl("www.publi11.com");
+        publishers.setName("Publi4");
+        publishers.setUrl("www.publi4.com");
 
         ctrPublishers.addPublisher(publishers);*/
 
@@ -95,21 +94,41 @@ public class Main {
 
 
 
-
+        /*Books funcionando*/
         /*BooksControllerImpl ctrBooks = new BooksControllerImpl();
         Books books = new Books();
         PublishersControllerImpl ctrPublishers = new PublishersControllerImpl();
 
 
-        books.setTitle("BOOK3");
-        books.setIsbn("ISBN3TESTE");
-        books.setPublisher_id(ctrPublishers.getPublisherByName("Publi11"));
+        books.setTitle("BOOK4");
+        books.setIsbn("ISBN4TESTE");
+        books.setPublisher_id(ctrPublishers.getPublisherByName("Publi3"));
         books.setPrice((float) 88.4);
 
-        ctrBooks.addBook(books);
+        ctrBooks.addBook(books);*/
 
 
-        System.out.println("Finish");*/
+
+
+
+
+        /*BooksAuthors*/
+        BooksAuthorsControllerImpl ctrBooksAuthors = new BooksAuthorsControllerImpl();
+        BooksAuthors booksAuthors = new BooksAuthors();
+        BooksControllerImpl ctrBooks = new BooksControllerImpl();
+        AuthorsControllerImpl ctrAuthors = new AuthorsControllerImpl();
+
+
+        booksAuthors.setSeq_no(2);
+        booksAuthors.setIsbn(ctrBooks.getBookByName("BOOK1"));
+        booksAuthors.setAuthor_id(ctrAuthors.getAuthorByName("TesteName2"));
+
+        ctrBooksAuthors.addBooksAuthor(booksAuthors);
+
+
+
+
+        System.out.println("Finish");
     }
 
 
