@@ -43,8 +43,10 @@ public class PublicationsView {
                 bookInformationText += "Abaixo as Informações do Livro\n\n";
                 bookInformationText += "Titulo: " + BookObj.getTitle() + "\n";
                 bookInformationText += "Codigo ISBN: " + BookObj.getIsbn() + "\n";
+                bookInformationText += "Valor: R$" + BookObj.getPrice().toString() + "\n";
                 bookInformationText += "Editora: " + PublisherObj.getName() + "\n";
                 bookInformationText += "Site Editora: " + PublisherObj.getUrl() + "\n";
+
 
                 JOptionPane.showMessageDialog(null,bookInformationText);
             }
