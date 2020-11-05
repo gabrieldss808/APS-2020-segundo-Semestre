@@ -113,17 +113,15 @@ public class Main {
 
 
         /*BooksAuthors*/
-        BooksAuthorsControllerImpl ctrBooksAuthors = new BooksAuthorsControllerImpl();
+        /*BooksAuthorsControllerImpl ctrBooksAuthors = new BooksAuthorsControllerImpl();
         BooksAuthors booksAuthors = new BooksAuthors();
         BooksControllerImpl ctrBooks = new BooksControllerImpl();
         AuthorsControllerImpl ctrAuthors = new AuthorsControllerImpl();
 
-
-        booksAuthors.setSeq_no(2);
         booksAuthors.setIsbn(ctrBooks.getBookByName("BOOK1"));
-        booksAuthors.setAuthor_id(ctrAuthors.getAuthorByName("TesteName2"));
+        booksAuthors.setAuthor_id(ctrAuthors.getAuthorByName("TesteName1"));
 
-        ctrBooksAuthors.addBooksAuthor(booksAuthors);
+        ctrBooksAuthors.addBooksAuthor(booksAuthors);*/
 
 
 

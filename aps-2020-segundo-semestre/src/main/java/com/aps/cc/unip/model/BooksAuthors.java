@@ -11,13 +11,9 @@ public class BooksAuthors implements Serializable {
     @JoinColumn(name="isbn")
     private Books isbn;
 
-    @Id
     @OneToOne
     @JoinColumn(name="author_id")
     private Authors author_id;
-
-    @Column(unique = true)
-    private Integer seq_no;
 
     public void BooksAuthors(){}
 
@@ -35,13 +31,5 @@ public class BooksAuthors implements Serializable {
 
     public void setAuthor_id(Authors author_id) {
         this.author_id = author_id;
-    }
-
-    public Integer getSeq_no() {
-        return seq_no;
-    }
-
-    public void setSeq_no(Integer seq_no) {
-        this.seq_no = seq_no;
     }
 }
