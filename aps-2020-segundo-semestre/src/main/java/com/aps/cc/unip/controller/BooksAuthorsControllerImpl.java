@@ -3,6 +3,7 @@ package com.aps.cc.unip.controller;
 import com.aps.cc.unip.DAO.DaoBooksAuthors;
 import com.aps.cc.unip.exception.ReadValuesFailException;
 import com.aps.cc.unip.exception.SaveOrUpdateFailException;
+import com.aps.cc.unip.model.Books;
 import com.aps.cc.unip.model.BooksAuthors;
 import org.hibernate.HibernateException;
 
@@ -26,11 +27,11 @@ public class BooksAuthorsControllerImpl implements BooksAuthorsControllerInterfa
     }
 
     @Override
-    public BooksAuthors getBookAuthorByName(String name) throws HibernateException{
+    public BooksAuthors getBookAuthorByIsbn(Books Isbn) throws HibernateException{
         try {
-            return daoBooksAuthors.getByName(name);
+            return daoBooksAuthors.getByIsbn(Isbn);
         }catch (HibernateException e){
-            throw new ReadValuesFailException("Falha na leitura do BooksAuthors: "+ name+".");
+            throw new ReadValuesFailException("Falha na leitura do BooksAuthors: "+ Isbn+".");
         }
     }
 

@@ -1,9 +1,8 @@
 package com.aps.cc.unip.view;
 
-import com.aps.cc.unip.controller.BooksControllerImpl;
-import com.aps.cc.unip.controller.BooksControllerInterface;
-import com.aps.cc.unip.controller.PublishersControllerImpl;
+import com.aps.cc.unip.controller.*;
 import com.aps.cc.unip.model.Books;
+import com.aps.cc.unip.model.BooksAuthors;
 import com.aps.cc.unip.model.Publishers;
 
 import javax.swing.*;
@@ -40,12 +39,17 @@ public class PublicationsView {
                 PublishersControllerImpl publishersController = new PublishersControllerImpl();
                 Publishers PublisherObj = publishersController.getPublisherById(BookObj.getPublisher_id().getPublisher_id());
 
+                BooksAuthorsControllerInterface booksAuthorsController = new BooksAuthorsControllerImpl();
+                BooksAuthors BooksAuthorsObj = booksAuthorsController.getBookAuthorByIsbn(BookObj);
+
                 bookInformationText += "Abaixo as Informações do Livro\n\n";
                 bookInformationText += "Titulo: " + BookObj.getTitle() + "\n";
+                bookInformationText += "Autor: " + BooksAuthorsObj.getAuthor_id().getName() + "\n";
                 bookInformationText += "Codigo ISBN: " + BookObj.getIsbn() + "\n";
                 bookInformationText += "Valor: R$" + BookObj.getPrice().toString() + "\n";
                 bookInformationText += "Editora: " + PublisherObj.getName() + "\n";
                 bookInformationText += "Site Editora: " + PublisherObj.getUrl() + "\n";
+
 
 
                 JOptionPane.showMessageDialog(null,bookInformationText);

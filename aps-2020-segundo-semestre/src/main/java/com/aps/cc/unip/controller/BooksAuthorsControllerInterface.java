@@ -1,5 +1,6 @@
 package com.aps.cc.unip.controller;
 
+import com.aps.cc.unip.model.Books;
 import com.aps.cc.unip.model.BooksAuthors;
 import org.hibernate.HibernateException;
 
@@ -8,7 +9,7 @@ import java.util.List;
 public interface BooksAuthorsControllerInterface {
     public List<BooksAuthors> getBooksAuthors() throws HibernateException;
 
-    public BooksAuthors getBookAuthorByName(String name) throws HibernateException;
+    public BooksAuthors getBookAuthorByIsbn(Books Isbn) throws HibernateException;
 
     public boolean addBooksAuthor(BooksAuthors booksAuthors) throws HibernateException;
 
