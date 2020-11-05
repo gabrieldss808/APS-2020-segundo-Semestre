@@ -17,6 +17,12 @@ public class MainView {
                 new PublicationsView().ShowView();
             }
         });
+        cadastrosButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new MainViewOfEntries().ShowView();
+            }
+        });
     }
 
     public static void main(String[] args) {
