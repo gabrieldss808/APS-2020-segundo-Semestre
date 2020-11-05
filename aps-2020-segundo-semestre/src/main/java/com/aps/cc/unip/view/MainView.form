@@ -23,23 +23,24 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="d654d" class="javax.swing.JButton" binding="visualizarLivrosButton">
-        <constraints>
-          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="Roboto Condensed" size="24" style="1"/>
-          <label value="Visualizar Livros"/>
-          <text value="Visualizar Livros"/>
-        </properties>
-      </component>
       <component id="7f67e" class="javax.swing.JButton" binding="cadastrosButton">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font name="Roboto Condensed" size="24" style="1"/>
           <text value="Cadastros"/>
+        </properties>
+      </component>
+      <component id="d654d" class="javax.swing.JButton" binding="visualizarLivrosButton">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Roboto Condensed" size="24" style="1"/>
+          <horizontalTextPosition value="0"/>
+          <label value="Livros"/>
+          <text value="Livros"/>
         </properties>
       </component>
     </children>

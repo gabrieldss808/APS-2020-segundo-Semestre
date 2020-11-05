@@ -48,11 +48,13 @@
           <foreground color="-4473925"/>
           <inheritsPopupMenu value="true"/>
           <layoutOrientation value="2"/>
-          <model/>
           <name value=""/>
-          <valueIsAdjusting value="false"/>
+          <valueIsAdjusting value="true"/>
           <visibleRowCount value="15"/>
         </properties>
+        <clientProperties>
+          <List.isFileList class="java.lang.Boolean" value="false"/>
+        </clientProperties>
       </component>
       <component id="e9787" class="javax.swing.JButton" binding="btnVisualizar">
         <constraints>

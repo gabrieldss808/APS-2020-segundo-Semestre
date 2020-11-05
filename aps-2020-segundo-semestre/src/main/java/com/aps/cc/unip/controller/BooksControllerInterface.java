@@ -8,6 +8,8 @@ import java.util.List;
 public interface BooksControllerInterface {
     public List<Books> getBooks() throws HibernateException;
 
+    public List<Books> getBooksPesq(String namePesq) throws HibernateException;
+
     public Books getBookByName(String name) throws HibernateException;
 
     public boolean addBook(Books books) throws HibernateException;

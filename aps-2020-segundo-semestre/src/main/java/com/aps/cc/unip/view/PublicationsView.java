@@ -8,7 +8,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Array;
 
 public class PublicationsView {
 
@@ -20,17 +19,41 @@ public class PublicationsView {
     private DefaultListModel listOfBooks;
 
     public PublicationsView() {
+
+        this.listOfBooks = new DefaultListModel();
+
+        this.LoadingItensList();
+
+        this.PublicationsList.setModel(this.listOfBooks);
+
         btnVisualizar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println(PublicationsList.getSelectedValue());
+
+            }
+        });
+        BtnSearchNow.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                listOfBooks.clear();
+
+                try {
+
+                    BooksControllerInterface booksController = new BooksControllerImpl();
+
+                    for (Books books : booksController.getBooksPesq(SearchInput.getText().trim())) {
+
+                        listOfBooks.addElement("Titulo: " + books.getTitle().trim());
+                    }
+                }catch (Exception error){
+                    error.printStackTrace();
+                }
             }
         });
     }
 
     public void ShowView() {
-
-        this.LoadingItensList();
 
         JFrame PublicationsView = new JFrame("Livrária Amazonas");
         PublicationsView.setContentPane(new PublicationsView().PublicationsViewMain);
@@ -43,8 +66,6 @@ public class PublicationsView {
 
     public void LoadingItensList(){
 
-        this.listOfBooks = new DefaultListModel();
-
         try {
             System.out.println("Books Controller");
             BooksControllerInterface booksController = new BooksControllerImpl();
@@ -52,10 +73,8 @@ public class PublicationsView {
             System.out.println("Get all");
             for (Books books : booksController.getBooks()) {
 
-                this.listOfBooks.addElement(books.getTitle());
+                this.listOfBooks.addElement("Titulo: " + books.getTitle().trim());
             }
-
-            this.PublicationsList.setModel(this.listOfBooks);
 
         }catch (Exception e){
             e.printStackTrace();

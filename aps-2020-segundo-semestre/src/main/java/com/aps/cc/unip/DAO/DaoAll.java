@@ -49,6 +49,17 @@ public class DaoAll {
         session.close();
         return lista;
     }
+
+    public List getByNamePesq(String ordem, Class<?> clas,String NamePesq) throws
+            HibernateException {
+        Session session = hibernateConfiguracao.openSession();
+        Criteria criteria = session.createCriteria(clas);
+        criteria.add(Restrictions.like("title", '%'+NamePesq+'%'));
+        criteria.addOrder(Order.asc(ordem));
+        List lista = criteria.list();
+        session.close();
+        return lista;
+    }
     public Object carregarUm(int id, Class<?> clas) throws HibernateException {
         Session session = hibernateConfiguracao.openSession();
         Transaction transaction = session.beginTransaction();
