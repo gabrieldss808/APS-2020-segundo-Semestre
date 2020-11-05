@@ -33,6 +33,15 @@ public class PublishersControllerImpl implements PublishersControllerInterface {
     }
 
     @Override
+    public Publishers getPublisherById(Integer IdPubli) throws HibernateException{
+        try {
+            return daoPublishers.getById(IdPubli);
+        }catch (HibernateException e){
+            throw new SaveOrUpdateFailException("Falha na leitura da editora");
+        }
+    }
+
+    @Override
     public boolean addPublisher(Publishers publishers) throws HibernateException{
         try {
             daoPublishers.gravar(publishers);

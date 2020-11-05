@@ -24,9 +24,7 @@ public class MainView {
         ViewPrincipal.setContentPane(new MainView().ViewMain);
         ViewPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ViewPrincipal.setLocationRelativeTo(null);
-        ViewPrincipal.setSize(new Dimension(500,500));
-        ViewPrincipal.setMinimumSize(new Dimension(500,500));
-        ViewPrincipal.setMaximumSize(new Dimension(500,500));
+        ViewPrincipal.setSize(new Dimension(438,500));
         ViewPrincipal.pack();
         ViewPrincipal.setVisible(true);
     }

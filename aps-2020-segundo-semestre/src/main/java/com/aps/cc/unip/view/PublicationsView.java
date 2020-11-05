@@ -2,7 +2,9 @@ package com.aps.cc.unip.view;
 
 import com.aps.cc.unip.controller.BooksControllerImpl;
 import com.aps.cc.unip.controller.BooksControllerInterface;
+import com.aps.cc.unip.controller.PublishersControllerImpl;
 import com.aps.cc.unip.model.Books;
+import com.aps.cc.unip.model.Publishers;
 
 import javax.swing.*;
 import java.awt.*;
@@ -30,6 +32,21 @@ public class PublicationsView {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                String bookInformationText = "";
+
+                BooksControllerInterface booksController = new BooksControllerImpl();
+                Books BookObj = booksController.getBookByName(PublicationsList.getSelectedValue().toString());
+
+                PublishersControllerImpl publishersController = new PublishersControllerImpl();
+                Publishers PublisherObj = publishersController.getPublisherById(BookObj.getPublisher_id().getPublisher_id());
+
+                bookInformationText += "Abaixo as Informações do Livro\n\n";
+                bookInformationText += "Titulo: " + BookObj.getTitle() + "\n";
+                bookInformationText += "Codigo ISBN: " + BookObj.getIsbn() + "\n";
+                bookInformationText += "Editora: " + PublisherObj.getName() + "\n";
+                bookInformationText += "Site Editora: " + PublisherObj.getUrl() + "\n";
+
+                JOptionPane.showMessageDialog(null,bookInformationText);
             }
         });
         BtnSearchNow.addActionListener(new ActionListener() {
@@ -44,7 +61,7 @@ public class PublicationsView {
 
                     for (Books books : booksController.getBooksPesq(SearchInput.getText().trim())) {
 
-                        listOfBooks.addElement("Titulo: " + books.getTitle().trim());
+                        listOfBooks.addElement(books.getTitle().trim());
                     }
                 }catch (Exception error){
                     error.printStackTrace();
@@ -59,7 +76,7 @@ public class PublicationsView {
         PublicationsView.setContentPane(new PublicationsView().PublicationsViewMain);
         PublicationsView.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         PublicationsView.setLocationRelativeTo(null);
-        PublicationsView.setSize(new Dimension(275,450));
+        PublicationsView.setSize(new Dimension(275,209));
         PublicationsView.pack();
         PublicationsView.setVisible(true);
     }
@@ -73,7 +90,7 @@ public class PublicationsView {
             System.out.println("Get all");
             for (Books books : booksController.getBooks()) {
 
-                this.listOfBooks.addElement("Titulo: " + books.getTitle().trim());
+                this.listOfBooks.addElement(books.getTitle().trim());
             }
 
         }catch (Exception e){
