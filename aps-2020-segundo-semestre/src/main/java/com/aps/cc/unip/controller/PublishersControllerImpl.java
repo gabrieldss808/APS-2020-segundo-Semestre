@@ -1,7 +1,9 @@
 package com.aps.cc.unip.controller;
 
 import com.aps.cc.unip.DAO.DaoPublishers;
+import com.aps.cc.unip.exception.ReadValuesFailException;
 import com.aps.cc.unip.exception.SaveOrUpdateFailException;
+import com.aps.cc.unip.model.Authors;
 import com.aps.cc.unip.model.Publishers;
 import org.hibernate.HibernateException;
 
@@ -68,6 +70,15 @@ public class PublishersControllerImpl implements PublishersControllerInterface {
             return true;
         }catch (HibernateException e){
             throw new SaveOrUpdateFailException("Falha ao deletar a editora: \n"+publishers);
+        }
+    }
+
+    @Override
+    public List<Publishers> getPublishersPesq(String namePublishersPesq) throws HibernateException {
+        try {
+            return daoPublishers.getByNamePesq("name", Publishers.class,namePublishersPesq,"name");
+        }catch (HibernateException e){
+            throw new ReadValuesFailException("Falha na leitura da Editora.");
         }
     }
 }

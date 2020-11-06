@@ -1,5 +1,6 @@
 package com.aps.cc.unip.controller;
 
+import com.aps.cc.unip.model.Authors;
 import com.aps.cc.unip.model.Publishers;
 import org.hibernate.HibernateException;
 
@@ -17,4 +18,6 @@ public interface PublishersControllerInterface {
     public boolean updatePublisher(Publishers publishers) throws HibernateException;
 
     public boolean deletePublisher(Publishers publishers) throws HibernateException;
+
+    public List<Publishers> getPublishersPesq(String namePublishersPesq) throws HibernateException;
 }

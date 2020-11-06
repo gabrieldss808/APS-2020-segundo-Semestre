@@ -13,7 +13,7 @@
     </properties>
     <border type="none"/>
     <children>
-      <component id="4ccd1" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+      <component id="4ccd1" class="javax.swing.JTextField" binding="SearchPublisher">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -84,11 +84,11 @@
           <doubleBuffered value="false"/>
           <enabled value="false"/>
           <opaque value="true"/>
-          <visible value="true"/>
+          <visible value="false"/>
         </properties>
         <border type="none"/>
         <children>
-          <component id="6bf3b" class="javax.swing.JLabel">
+          <component id="6bf3b" class="javax.swing.JLabel" binding="NomeEditora">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -105,7 +105,7 @@
             </constraints>
             <properties/>
           </component>
-          <component id="dc564" class="javax.swing.JLabel">
+          <component id="dc564" class="javax.swing.JLabel" binding="Site">
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -137,7 +137,7 @@
             </constraints>
             <properties>
               <foreground color="-1"/>
-              <text value="Confirmar Alteração?"/>
+              <text value=""/>
             </properties>
           </component>
           <component id="22c29" class="javax.swing.JButton" binding="btCancelTask">
