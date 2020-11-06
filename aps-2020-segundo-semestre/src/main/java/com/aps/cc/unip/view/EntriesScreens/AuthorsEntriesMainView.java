@@ -217,7 +217,6 @@ public class AuthorsEntriesMainView {
         AuthorsEntriesView.setContentPane(new AuthorsEntriesMainView().AuthorsEntriesMainView);
         AuthorsEntriesView.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         AuthorsEntriesView.setLocationRelativeTo(null);
-        AuthorsEntriesView.setSize(new Dimension(275,209));
         AuthorsEntriesView.pack();
         AuthorsEntriesView.setVisible(true);
     }

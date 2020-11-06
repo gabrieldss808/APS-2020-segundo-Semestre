@@ -2,6 +2,7 @@ package com.aps.cc.unip.view;
 
 import com.aps.cc.unip.view.EntriesScreens.AuthorsEntriesMainView;
 import com.aps.cc.unip.view.EntriesScreens.PublishersEntriesMainView;
+import com.aps.cc.unip.view.EntriesScreens.BooksEntriesMainView;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,6 +26,13 @@ public class MainViewOfEntries {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new PublishersEntriesMainView().ShowView();
+            }
+        });
+
+        BtBooksEntries.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new BooksEntriesMainView().ShowView();
             }
         });
     }

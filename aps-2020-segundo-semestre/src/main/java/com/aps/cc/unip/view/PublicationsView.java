@@ -44,7 +44,7 @@ public class PublicationsView {
 
                 bookInformationText += "Abaixo as Informações do Livro\n\n";
                 bookInformationText += "Titulo: " + BookObj.getTitle() + "\n";
-                bookInformationText += "Autor: " + BooksAuthorsObj.getAuthor_id().getName() + ' ' + BooksAuthorsObj.getAuthor_id().getFname() + "\n";
+                bookInformationText += "Autor: " + BooksAuthorsObj.getAuthor_id().getName().trim() + ' ' + BooksAuthorsObj.getAuthor_id().getFname().trim() + "\n";
                 bookInformationText += "Codigo ISBN: " + BookObj.getIsbn() + "\n";
                 bookInformationText += "Valor: R$" + BookObj.getPrice().toString() + "\n";
                 bookInformationText += "Editora: " + PublisherObj.getName() + "\n";
