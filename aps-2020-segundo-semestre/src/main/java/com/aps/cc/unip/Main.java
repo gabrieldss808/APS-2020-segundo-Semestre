@@ -1,12 +1,9 @@
 package com.aps.cc.unip;
 
-import com.aps.cc.unip.DAO.HibernateConfig;
 import com.aps.cc.unip.controller.*;
 import com.aps.cc.unip.model.Authors;
 import com.aps.cc.unip.model.Books;
 import com.aps.cc.unip.model.Publishers;
-
-import javax.swing.*;
 
 public class Main {
 
@@ -14,7 +11,7 @@ public class Main {
         System.out.println("Start");
 
         try {
-
+            System.out.println("Authors Controller");
             AuthorsControllerInterface authorsController = new AuthorsControllerImpl();
 
             System.out.println("Get all");
@@ -48,6 +45,13 @@ public class Main {
                 System.out.println(publishers);
             }
 
+            //System.out.println("Add");
+            //Authors v = new Authors();
+            //v.setAuthor_id(7);
+            //v.setName("Veronica");
+            //v.setFname("L.");
+
+            //System.out.println(authorsController.getAuthorByName("Victoria"));
         }catch (Exception e){
             e.printStackTrace();
         }

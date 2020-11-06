@@ -7,13 +7,15 @@ import java.util.List;
 
 public interface AuthorsControllerInterface {
 
-    public List<Authors> getAuthors() throws HibernateException;
+    List<Authors> getAuthors() throws HibernateException;
 
-    public Authors getAuthorByName(String name) throws HibernateException;
+    List<Authors> getAuthorsPesq(String nameAuthorPesq) throws HibernateException;
 
-    public boolean addAuthor(Authors author) throws HibernateException;
+    Authors getAuthorByName(String name) throws HibernateException;
 
-    public boolean updateAuthor(Authors author) throws HibernateException;
+    boolean addAuthor(Authors author) throws HibernateException;
 
-    public boolean deleteAuthor(Authors author) throws HibernateException;
+    boolean updateAuthor(Authors author) throws HibernateException;
+
+    boolean deleteAuthor(Authors author) throws HibernateException;
 }

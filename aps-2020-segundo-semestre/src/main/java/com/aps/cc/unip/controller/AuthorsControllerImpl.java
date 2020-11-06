@@ -26,6 +26,15 @@ public class AuthorsControllerImpl implements AuthorsControllerInterface {
     }
 
     @Override
+    public List<Authors> getAuthorsPesq(String nameAuthorPesq) throws HibernateException {
+        try {
+            return daoAuthors.getByNamePesq("name", Authors.class,nameAuthorPesq,"name");
+        }catch (HibernateException e){
+            throw new ReadValuesFailException("Falha na leitura dos Livros.");
+        }
+    }
+
+    @Override
     public Authors getAuthorByName(String name) throws HibernateException{
         try {
             return daoAuthors.getByName(name);

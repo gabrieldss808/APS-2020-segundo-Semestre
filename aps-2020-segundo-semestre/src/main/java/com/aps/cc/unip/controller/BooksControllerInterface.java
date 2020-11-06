@@ -6,13 +6,15 @@ import org.hibernate.HibernateException;
 import java.util.List;
 
 public interface BooksControllerInterface {
-    public List<Books> getBooks() throws HibernateException;
+    List<Books> getBooks() throws HibernateException;
 
-    public Books getBookByName(String name) throws HibernateException;
+    List<Books> getBooksPesq(String namePesq) throws HibernateException;
 
-    public boolean addBook(Books books) throws HibernateException;
+    Books getBookByName(String name) throws HibernateException;
 
-    public boolean updateBook(Books books) throws HibernateException;
+    boolean addBook(Books books) throws HibernateException;
 
-    public boolean deleteBook(Books books) throws HibernateException;
+    boolean updateBook(Books books) throws HibernateException;
+
+    boolean deleteBook(Books books) throws HibernateException;
 }

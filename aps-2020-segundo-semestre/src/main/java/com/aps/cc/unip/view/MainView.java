@@ -2,8 +2,6 @@ package com.aps.cc.unip.view;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class MainView {
     private JButton visualizarLivrosButton;
@@ -11,12 +9,8 @@ public class MainView {
     private JPanel ViewMain;
 
     public MainView() {
-        visualizarLivrosButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new PublicationsView().ShowView();
-            }
-        });
+        visualizarLivrosButton.addActionListener(e -> new PublicationsView().ShowView());
+        cadastrosButton.addActionListener(e -> new MainViewOfEntries().ShowView());
     }
 
     public static void main(String[] args) {
@@ -24,9 +18,7 @@ public class MainView {
         ViewPrincipal.setContentPane(new MainView().ViewMain);
         ViewPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ViewPrincipal.setLocationRelativeTo(null);
-        ViewPrincipal.setSize(new Dimension(500,500));
-        ViewPrincipal.setMinimumSize(new Dimension(500,500));
-        ViewPrincipal.setMaximumSize(new Dimension(500,500));
+        ViewPrincipal.setSize(new Dimension(438,500));
         ViewPrincipal.pack();
         ViewPrincipal.setVisible(true);
     }

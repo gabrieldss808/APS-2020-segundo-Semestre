@@ -25,4 +25,19 @@ public class DaoPublishers extends DaoAll {
 
         return (Publishers) obj;
     }
+
+    public Publishers getById(Integer Id) throws HibernateException {
+        Session session = hibernateConfiguracao.openSession();
+        Transaction transaction = session.beginTransaction();
+
+        Criteria criteria = session.createCriteria(Publishers.class);
+        criteria.add(Restrictions.eq("publisher_id", Id));
+
+        Object obj = criteria.uniqueResult();
+
+        transaction.commit();
+        session.close();
+
+        return (Publishers) obj;
+    }
 }

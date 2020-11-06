@@ -2,6 +2,7 @@ package com.aps.cc.unip.DAO;
 
 import com.aps.cc.unip.model.Authors;
 import com.aps.cc.unip.model.Books;
+import com.aps.cc.unip.model.BooksAuthors;
 import com.aps.cc.unip.model.Publishers;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -27,6 +28,7 @@ public class HibernateConfig {
         configuration.addAnnotatedClass(Authors.class);
         configuration.addAnnotatedClass(Publishers.class);
         configuration.addAnnotatedClass(Books.class);
+        configuration.addAnnotatedClass(BooksAuthors.class);
         ServiceRegistry serviceRegistry = new
                 StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).
                 build();
