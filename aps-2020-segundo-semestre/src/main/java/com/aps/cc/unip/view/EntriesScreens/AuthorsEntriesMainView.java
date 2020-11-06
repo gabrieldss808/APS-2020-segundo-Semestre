@@ -40,13 +40,34 @@ public class AuthorsEntriesMainView {
         btShowAuthor.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                FormPanelContainer.setVisible(true);
+
+                String AuthorDataText;
+                String SelectedValue;
+
+                try{
+                    SelectedValue = AuthorsList.getSelectedValue().toString();
+
+                    AuthorsControllerInterface authorsController = new AuthorsControllerImpl();
+                    Authors author = authorsController.getAuthorByName(SelectedValue);
+
+                    AuthorDataText = "Dados do autor:\n";
+                    AuthorDataText += "Nome Completo : " + author.getName().trim() + " " + author.getFname().trim() + "\n";
+                    AuthorDataText += "Id do Autor: " + author.getAuthor_id() + "\n";
+                }
+                catch (Exception notSelectedItem){
+
+                    AuthorDataText = "Selecione um registro para visualizar";
+                }
+
+                JOptionPane.showMessageDialog(null,AuthorDataText);
+
             }
         });
         btSearchAuthors.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 listOfAuthors.clear();
+                String textToSearch;
 
                 try {
 

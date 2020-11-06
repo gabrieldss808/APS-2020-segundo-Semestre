@@ -36,7 +36,7 @@
       </scrollpane>
       <component id="c2614" class="javax.swing.JButton" binding="btAddAuthor">
         <constraints>
-          <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Incluir"/>
@@ -53,7 +53,7 @@
       </component>
       <component id="27397" class="javax.swing.JButton" binding="btShowAuthor">
         <constraints>
-          <grid row="1" column="3" row-span="2" col-span="2" vsize-policy="0" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="3" row-span="2" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Visualizar"/>
@@ -61,7 +61,7 @@
       </component>
       <component id="de5c6" class="javax.swing.JButton" binding="btAlterAuthor">
         <constraints>
-          <grid row="3" column="3" row-span="2" col-span="2" vsize-policy="0" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="3" column="3" row-span="2" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="Alterar"/>
