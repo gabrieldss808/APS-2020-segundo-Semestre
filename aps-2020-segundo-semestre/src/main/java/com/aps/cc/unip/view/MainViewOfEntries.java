@@ -1,6 +1,7 @@
 package com.aps.cc.unip.view;
 
 import com.aps.cc.unip.view.EntriesScreens.AuthorsEntriesMainView;
+import com.aps.cc.unip.view.EntriesScreens.PublishersEntriesMainView;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,6 +19,12 @@ public class MainViewOfEntries {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new AuthorsEntriesMainView().ShowView();
+            }
+        });
+        BtPublisherEntries.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new PublishersEntriesMainView().ShowView();
             }
         });
     }
