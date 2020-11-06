@@ -7,6 +7,9 @@
     </constraints>
     <properties>
       <autoscrolls value="true"/>
+      <maximumSize width="460" height="259"/>
+      <minimumSize width="460" height="259"/>
+      <preferredSize width="460" height="259"/>
     </properties>
     <border type="none"/>
     <children>
@@ -80,7 +83,7 @@
         <properties>
           <background color="-11316653"/>
           <doubleBuffered value="false"/>
-          <enabled value="true"/>
+          <enabled value="false"/>
           <opaque value="true"/>
           <visible value="false"/>
         </properties>
