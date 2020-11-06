@@ -28,7 +28,7 @@ public class BooksControllerImpl implements BooksControllerInterface {
     @Override
     public List<Books> getBooksPesq(String namePesq) throws HibernateException{
         try {
-            return daoBooks.getByNamePesq("title",Books.class,namePesq);
+            return daoBooks.getByNamePesq("title",Books.class,namePesq,"title");
         }catch (HibernateException e){
             throw new ReadValuesFailException("Falha na leitura dos Livros.");
         }

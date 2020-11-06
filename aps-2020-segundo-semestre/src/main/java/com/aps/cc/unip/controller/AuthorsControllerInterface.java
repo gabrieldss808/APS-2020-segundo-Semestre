@@ -9,6 +9,8 @@ public interface AuthorsControllerInterface {
 
     public List<Authors> getAuthors() throws HibernateException;
 
+    public List<Authors> getAuthorsPesq(String nameAuthorPesq) throws HibernateException;
+
     public Authors getAuthorByName(String name) throws HibernateException;
 
     public boolean addAuthor(Authors author) throws HibernateException;

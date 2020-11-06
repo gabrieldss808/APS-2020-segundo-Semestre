@@ -13,7 +13,7 @@
     </properties>
     <border type="none"/>
     <children>
-      <component id="3f088" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+      <component id="3f088" class="javax.swing.JTextField" binding="SearchAuthor">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -28,7 +28,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="d1ac7" class="javax.swing.JList" binding="list1" default-binding="true">
+          <component id="d1ac7" class="javax.swing.JList" binding="AuthorsList">
             <constraints/>
             <properties/>
           </component>

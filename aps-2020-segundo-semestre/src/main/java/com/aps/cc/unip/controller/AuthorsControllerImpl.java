@@ -5,6 +5,7 @@ import com.aps.cc.unip.exception.DeleteFailException;
 import com.aps.cc.unip.exception.ReadValuesFailException;
 import com.aps.cc.unip.exception.SaveOrUpdateFailException;
 import com.aps.cc.unip.model.Authors;
+import com.aps.cc.unip.model.Books;
 import org.hibernate.HibernateException;
 
 import java.util.List;
@@ -22,6 +23,15 @@ public class AuthorsControllerImpl implements AuthorsControllerInterface {
             return daoAuthors.carregarTudoOrdenado("name", Authors.class);
         } catch (HibernateException e) {
             throw new ReadValuesFailException("Falha na leitura dos Autores.");
+        }
+    }
+
+    @Override
+    public List<Authors> getAuthorsPesq(String nameAuthorPesq) throws HibernateException {
+        try {
+            return daoAuthors.getByNamePesq("name", Authors.class,nameAuthorPesq,"name");
+        }catch (HibernateException e){
+            throw new ReadValuesFailException("Falha na leitura dos Livros.");
         }
     }
 

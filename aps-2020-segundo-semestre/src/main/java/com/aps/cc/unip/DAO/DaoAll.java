@@ -50,11 +50,11 @@ public class DaoAll {
         return lista;
     }
 
-    public List getByNamePesq(String ordem, Class<?> clas,String NamePesq) throws
+    public List getByNamePesq(String ordem, Class<?> clas,String NamePesq, String Field) throws
             HibernateException {
         Session session = hibernateConfiguracao.openSession();
         Criteria criteria = session.createCriteria(clas);
-        criteria.add(Restrictions.like("title", '%'+NamePesq+'%'));
+        criteria.add(Restrictions.like(Field, '%'+NamePesq+'%'));
         criteria.addOrder(Order.asc(ordem));
         List lista = criteria.list();
         session.close();
