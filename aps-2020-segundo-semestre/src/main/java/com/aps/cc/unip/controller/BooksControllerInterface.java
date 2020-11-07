@@ -12,6 +12,10 @@ public interface BooksControllerInterface {
 
     Books getBookByName(String name) throws HibernateException;
 
+    Integer getBooksCountByPublisherId(Integer publisherId) throws HibernateException;
+
+    List<Books> getBooksByPublisherId(Integer publisherId) throws HibernateException;
+
     boolean addBook(Books books) throws HibernateException;
 
     boolean updateBook(Books books) throws HibernateException;

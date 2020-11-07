@@ -8,6 +8,8 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 
+import java.util.List;
+
 public class DaoBooksAuthors extends DaoAll {
     public void DaoBooksAuthors() {}
 
@@ -24,5 +26,25 @@ public class DaoBooksAuthors extends DaoAll {
         session.close();
 
         return (BooksAuthors) obj;
+    }
+
+    public Integer countByAuthorId(Integer authorId) throws HibernateException{
+
+        return byAuthorId(authorId).size();
+    }
+
+    public List byAuthorId(Integer authorId) throws HibernateException{
+        Session session = hibernateConfiguracao.openSession();
+        Transaction transaction = session.beginTransaction();
+
+        Criteria criteria = session.createCriteria(BooksAuthors.class);
+        criteria.add(Restrictions.eq("author_id", authorId));
+
+        List objList = criteria.list();
+
+        transaction.commit();
+        session.close();
+
+        return objList;
     }
 }

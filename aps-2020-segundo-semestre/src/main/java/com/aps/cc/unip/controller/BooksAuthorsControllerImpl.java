@@ -36,6 +36,24 @@ public class BooksAuthorsControllerImpl implements BooksAuthorsControllerInterfa
     }
 
     @Override
+    public Integer getBooksCountByAuthorId(Integer authorId) throws HibernateException {
+        try {
+            return daoBooksAuthors.countByAuthorId(authorId);
+        }catch (HibernateException e){
+            throw new ReadValuesFailException("Falha na contagem do BooksAuthors pelo Id do Autor: "+ authorId+".");
+        }
+    }
+
+    @Override
+    public List<BooksAuthors> getBooksByAuthorId(Integer authorId) throws HibernateException {
+        try {
+            return daoBooksAuthors.byAuthorId(authorId);
+        }catch (HibernateException e){
+            throw new ReadValuesFailException("Falha na leitura de BooksAuthors pelo Id do Autor: "+ authorId+".");
+        }
+    }
+
+    @Override
     public boolean addBooksAuthor(BooksAuthors booksAuthors) throws HibernateException{
         try{
             daoBooksAuthors.gravar(booksAuthors);
