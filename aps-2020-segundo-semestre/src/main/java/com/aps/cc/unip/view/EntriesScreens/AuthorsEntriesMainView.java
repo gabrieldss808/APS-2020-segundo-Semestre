@@ -1,11 +1,9 @@
 package com.aps.cc.unip.view.EntriesScreens;
 
-import com.aps.cc.unip.controller.AuthorsControllerImpl;
-import com.aps.cc.unip.controller.AuthorsControllerInterface;
-import com.aps.cc.unip.controller.BooksControllerImpl;
-import com.aps.cc.unip.controller.BooksControllerInterface;
+import com.aps.cc.unip.controller.*;
 import com.aps.cc.unip.model.Authors;
 import com.aps.cc.unip.model.Books;
+import com.aps.cc.unip.model.BooksAuthors;
 import com.aps.cc.unip.view.MainViewOfEntries;
 
 import javax.swing.*;
@@ -226,7 +224,6 @@ public class AuthorsEntriesMainView {
         try {
             AuthorsControllerInterface AuthorsController = new AuthorsControllerImpl();
 
-            System.out.println("Get all");
             for (Authors authors : AuthorsController.getAuthors()) {
 
                 this.listOfAuthors.addElement(authors.getName().trim());

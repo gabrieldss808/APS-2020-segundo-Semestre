@@ -39,6 +39,7 @@ public class PublishersEntriesMainView {
         this.LoadingItensList();
 
         this.PublishersList.setModel(this.listOfPublishers);
+
         btShowPublisher.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -69,7 +70,6 @@ public class PublishersEntriesMainView {
             @Override
             public void actionPerformed(ActionEvent e) {
                 listOfPublishers.clear();
-                String textToSearch;
 
                 try {
 
