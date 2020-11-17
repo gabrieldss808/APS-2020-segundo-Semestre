@@ -92,12 +92,6 @@ public class BooksEntriesMainView {
                 JOptionPane.showMessageDialog(null, BooksDataText);
             }
         });
-        btOkFormBook.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
         btCancelTask.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -229,11 +223,11 @@ public class BooksEntriesMainView {
                 PriceBooksInput.setText("");
                 AutorBooksInput.removeAllItems();
                 PublisherBooksInput.removeAllItems();
-                TitleBooksInput.setEnabled(false);
-                ISBNBooksInput.setEnabled(false);
-                PriceBooksInput.setEnabled(false);
-                AutorBooksInput.setEnabled(false);
-                PublisherBooksInput.setEnabled(false);
+                TitleBooksInput.setEnabled(true);
+                ISBNBooksInput.setEnabled(true);
+                PriceBooksInput.setEnabled(true);
+                AutorBooksInput.setEnabled(true);
+                PublisherBooksInput.setEnabled(true);
 
                 listOfBooks.clear();
                 LoadingItensList();
