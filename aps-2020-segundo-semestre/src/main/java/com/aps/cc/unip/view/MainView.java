@@ -14,7 +14,7 @@ public class MainView {
     }
 
     public static void main(String[] args) {
-        JFrame ViewPrincipal = new JFrame("Livrária Amazonas");
+        JFrame ViewPrincipal = new JFrame("Livraria Amazônia");
         ViewPrincipal.setContentPane(new MainView().ViewMain);
         ViewPrincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         ViewPrincipal.setLocationRelativeTo(null);

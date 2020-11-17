@@ -215,7 +215,7 @@ public class PublishersEntriesMainView {
 
     public void ShowView() {
 
-        JFrame PublishersEntriesView = new JFrame("Cadastro de Publishers");
+        JFrame PublishersEntriesView = new JFrame("Cadastro de Editoras");
         PublishersEntriesView.setContentPane(new PublishersEntriesMainView().PublishersEntriesMainView);
         PublishersEntriesView.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         PublishersEntriesView.setLocationRelativeTo(null);
